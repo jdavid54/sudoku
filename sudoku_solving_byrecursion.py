@@ -25,31 +25,38 @@ def solve():
                 for n in range(1,10):
                     if possible(y, x, n):
                         grid[y][x] = n
-                        solve()
+                        yield from solve()
                         grid[y][x] = 0
-                return
-    print(np.matrix(grid))
-    input('More ?')
+                return    
+    m = np.matrix(grid)    
+    yield m    
+    #print(m)
+    #input('More ?')
+    
+def trans_grid(g):
+    r = [[0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0]]    
+    for y in range(9):
+        for x in range(9):
+            r[y][x] = int(g[y][x])
+    return r
 
-grid = [[5,3,0,0,7,0,0,0,0],
-        [6,0,0,1,9,5,0,0,0],
-        [0,9,8,0,0,0,0,6,0],
-        [8,0,0,0,6,0,0,0,3],
-        [4,0,0,8,0,3,0,0,1],
-        [7,0,0,0,2,0,0,0,6],
-        [0,6,0,0,0,0,2,8,0],
-        [0,0,0,4,1,9,0,0,5],
-        [0,0,0,0,0,0,0,7,9]]
-
-grid = [[0,0,0,2,0,9,0,0,0],
-        [0,9,0,7,0,5,0,1,0],
-        [0,1,0,0,0,0,0,2,0],
-        [0,0,3,0,0,0,2,0,0],
-        [5,0,0,9,0,2,0,0,7],
-        [0,0,7,0,0,0,8,0,0],
-        [0,3,0,0,0,0,0,9,0],
-        [0,2,0,4,0,7,0,8,0],
-        [0,0,0,6,0,1,0,0,0]]
-
-#print(possible(4,4,5))
-solve()
+from grids import *
+grids = (grid1, grid2, grid3, grid4, grid5)
+for grid in grids:
+    print('Grille à résoudre :\n', np.matrix(grid))    
+    s = solve()
+    l = list(enumerate(s))     # soit list(s) soit next(s)
+    for n,k in l:
+        try:
+            print(len(l),'solution(s):',n+1,'\n', k,'\n')
+            #print(np.matrix(next(s)))
+        except:
+            pass
