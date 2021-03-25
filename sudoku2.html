@@ -1,0 +1,109 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+
+<script>
+var rows= new Array(9);
+//base grid
+/*
+rows[0]='609000000';
+rows[1]='008000702';
+rows[2]='200034000';
+rows[3]='003402179';
+rows[4]='410000258';
+rows[5]='920108300';
+rows[6]='704510023';
+rows[7]='302040615';
+rows[8]='000000407';
+
+rows[0]='020000068';
+rows[1]='300000900';
+rows[2]='000745000';
+rows[3]='069837040';
+rows[4]='000502000';
+rows[5]='075010080';
+rows[6]='000984000';
+rows[7]='800000700';
+rows[8]='000000032';
+
+rows[0]='400050030';
+rows[1]='006100000';
+rows[2]='000702005';
+rows[3]='020000800';
+rows[4]='050017000';
+rows[5]='080000300';
+rows[6]='000405001';
+rows[7]='007200000';
+rows[8]='900030040';
+
+rows[0]='000746000';
+rows[1]='480030051';
+rows[2]='000000000';
+rows[3]='000108000';
+rows[4]='002000100';
+rows[5]='069000530';
+rows[6]='048000790';
+rows[7]='700000006';
+rows[8]='000905000';
+*/
+rows[0]='400009006';
+rows[1]='000070009';
+rows[2]='000300800';
+rows[3]='006000050';
+rows[4]='957248001';
+rows[5]='001000040';
+rows[6]='000800700';
+rows[7]='000030004';
+rows[8]='800005003';
+//pattern used
+pattern='123456789';
+</script>
+
+</head>
+
+<body>
+<div id="candidategrid">
+<style>
+td {font-family:arial; border: 1px solid black; font-size:12px; text-align:left; vertical-align:top; width:40px; height:40px;} 
+.found {font-weight:bold;font-size:20px;text-align:center; vertical-align:middle;} 
+div{display:inline; float:left;} 
+p {font-family:arial; font-size:12px;}
+.grey {background-color:#FF0000;}
+</style>
+<table>
+<tbody>
+<tr>
+<td class="found" "grey">5</td>
+<td class="found">6</td>
+<td>47</td>
+<td>4789</td>
+<td>14</td>
+<td>1478</td>
+<td>189</td>
+<td class="found">3</td>
+<td class="found">2</td>
+</tr>
+
+<tr><td>2379</td><td>23479</td><td>2347</td><td>2345789</td><td>12346</td><td>1345678</td><td>1689</td><td class="found">7</td><td class="found">1</td></tr>
+<tr><td class="found">8</td><td class="found">1</td><td>237</td><td>2379</td><td>236</td><td>367</td><td>69</td><td class="found">4</td><td class="found">5</td></tr>
+<tr><td>2369</td><td>2359</td><td class="found">1</td><td>3458</td><td>346</td><td>34568</td><td class="found">7</td><td>2569</td><td>3469</td></tr>
+<tr><td class="found">4</td><td>2357</td><td>23567</td><td>357</td><td class="found">9</td><td>3567</td><td class="found">1</td><td>256</td><td class="found">8</td></tr>
+<tr><td>3679</td><td>3579</td><td class="found">8</td><td class="found">1</td><td>346</td><td class="found">2</td><td>34569</td><td>569</td><td>3469</td></tr>
+<tr><td>1367</td><td>3457</td><td class="found">9</td><td>34</td><td class="found">8</td><td class="found">1</td><td class="found">2</td><td>567</td><td>3467</td></tr>
+<tr><td class="found">1</td><td>2345</td><td>2345</td><td class="found">6</td><td class="found">7</td><td class="found">9</td><td>3458</td><td>58</td><td>34</td></tr>
+<tr><td>2367</td><td class="found">8</td><td>23467</td><td class="found">2</td><td class="found">5</td><td>34</td><td>3469</td><td class="found">1</td><td>34679</td></tr>
+</tbody>
+</table>
+</div>
+
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+<div id="formdiv" float="right"><p id="title"><b>Sudoku grid input</b></p><p>Enter 0 for unknown numbers</p><p>Replace them with your solutions!</p><form id="basegrid"><input type="text" id="row1" value="560000032"><br><input type="text" id="row2" value="000000071"><br><input type="text" id="row3" value="810000045"><br><input type="text" id="row4" value="001000700"><br><input type="text" id="row5" value="400090108"><br><input type="text" id="row6" value="008102000"><br><input type="text" id="row7" value="009081200"><br><input type="text" id="row8" value="100679000"><br><input type="text" id="row9" value="080250010"><br></form><p>Then push update button !</p><button onclick="updateValues()">Update it</button><p>Just keep updating if any changes occur !</p>
+
+</div>
+<script type="text/javascript" src="sudoku2.js"></script>
+<script>
+showForm();
+updateAll();
+</script>
+
+</body></html>
