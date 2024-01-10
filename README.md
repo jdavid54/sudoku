@@ -21,6 +21,8 @@ Brute force solving
 
 # SAMOURAI SOLVING
 
+Samourai grid is a 5-sudoku-grid combined into one. The rules are the same as for a simple sudoku grid but for the central grid, corners are shared with the 4 satelites.
+
 ![Sudoku grid](Sudoku_samourai.png)
 
 Brute force solving
