@@ -21,4 +21,6 @@ Brute force solving
 
 # SAMOURAI SOLVING
 
+![Sudoku grid](Sudoku_samourai.png)
+
 Brute force solving
