@@ -21,4 +21,4 @@ Brute force solving
 
 # SAMOURAI SOLVING
 
-Brute foce solving
+Brute force solving
